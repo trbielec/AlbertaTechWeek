@@ -42,8 +42,8 @@
 		
 		<div id="content" class="grid_7">
 			<h1>Alberta Tech Week</h1>
-			<h2>Get ready for the best week ever!</h2>
-			<p>This is supposed to be a paragraph explaining what Tech Week is.</p>		
+			<h2>10 full days of technology</h2>
+			<p>This site is the hub of all events, meetups, socials, and hackathons.</p>		
 		</div>
 		<div id="decorative" class="grid_5 omega">
 			<img src="images/calendar.png">
@@ -80,36 +80,9 @@
 			  'region' => 'AB',
 			  'country' => 'CA'
 			);
-			$events = $eb_client->event_search($search_params);
+			$events = $eb_client->event_search($search_params); ?>
 
-			//mark-up the list of events that were requested 
-			// render in html - ?>
-			<!-- <style type="text/css">
-			.eb_event_list_item{
-			  padding-top: 20px;
-			}
-			.eb_event_list_title{
-	/*			  position: absolute;*/
-	/*			padding-top: 10px;*/
-	/*			margin-left: 10px;*/
-	/*			  left: 220px;
-			  width: 300px;*/
-			  overflow: hidden;
-			}
-			.eb_event_list_date{
-	/*			  padding-left: 20px;*/
-			}
-			.eb_event_list_time{
-	/*			  position: absolute;*/
-	/*			  left: 150px;*/
-			}
-			.eb_event_list_location{
-	/*			  position: absolute;*/
-	/*			  left: 520px;*/
-			}
-			</style> -->
-
-			<!-- <h2>My Event List:</h2> -->
+			
 			<?= Eventbrite::eventList( $events, 'eventListRow'); ?>			
 			
 			
@@ -124,25 +97,11 @@
 	<div class="container clearfix">
 		
 		<div id="content" class="grid_12">
-			<h1>Grid</h1>
-			<h2>See how the grid changes when you resize your screen</h2>
+			<h1>Submit an Event</h1>
+			<h2>Do you have a tech-related event during this week? </h2>
+			<p>Post it here!</p>
 		</div>
 		
-		<div id="test" class="grid_1">1</div> <div id="test" class="grid_11 omega">11</div>
-		<div id="test" class="grid_2">2</div> <div id="test" class="grid_10 omega">10</div>
-		<div id="test" class="grid_3">3</div> <div id="test" class="grid_9 omega">9</div>
-		<div id="test" class="grid_4">4</div> <div id="test" class="grid_8 omega">8</div>
-		<div id="test" class="grid_5">5</div> <div id="test" class="grid_7 omega">7</div>
-		<div id="test" class="grid_6">6</div> <div id="test" class="grid_6 omega">6</div>
-		<div id="test" class="grid_7">7</div> <div id="test" class="grid_5 omega">5</div>
-		<div id="test" class="grid_8">8</div> <div id="test" class="grid_4 omega">4</div>
-		<div id="test" class="grid_9">9</div> <div id="test" class="grid_3 omega">3</div>
-		<div id="test" class="grid_10">10</div> <div id="test" class="grid_2 omega">2</div>
-		<div id="test" class="grid_11">11</div> <div id="test" class="grid_1 omega">1</div>
-		<div id="test" class="grid_12">12</div>
-		
-		
-	
 	</div>
 </div>
 
@@ -153,14 +112,14 @@
 		
 		<div id="content" class="grid_12">
 			<h1>Credits</h1>
-			<h2 align='center'>Alberta Tech Week is brought to you by AccelerateAB</h2>
+			<div id="brought2u"><h2 align='center'>Alberta Tech Week is brought to you by</h2><br><br></div>
 			<!-- <p>Follow us on Twitter!</p> -->
-			<div align='center'><a href="https://twitter.com/AccelerateAB" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @AccelerateAB</a>
+			<div id='credit_1' align='center' class="grid_4"><h2>AccelerateAB<h2><br><a href="https://twitter.com/AccelerateAB" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @AccelerateAB</a>
 			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
 			<!-- <p><a href="https://twitter.com/AccelerateAB" target="_blank"><img src="images/twitter.png"></a></p> -->
-			<p align='center'><a href="http://www.eventbrite.com" target="_blank"><img src="images/eventbrite.png"></a></p><br>
-			<h2 align='center'>Design by</h2>
-			<p align='center'><a href="http://www.ownthenight.co" target="_blank"><img src="images/OwnTheNight.png"></a></p>
+			<div id='credit_2' align='center' class="grid_3"><a href="http://www.eventbrite.com" target="_blank"><img src="images/eventbrite.png"></a></div>
+			<div id='credit_3' align='center' class="grid_4"><h2 align='center'>Design by</h2>
+			<p align='center'><a href="http://www.ownthenight.co" target="_blank"><img src="images/OwnTheNight.png"></a></p></div>
 		</div>
 	
 	</div>

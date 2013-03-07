@@ -75,7 +75,7 @@ a:visited {
 	width:100%;
 	height:auto;
 	position: relative;
-	padding:140px 0;
+	padding:80px 0;
 }
 
 
@@ -83,8 +83,9 @@ a:visited {
 /* Slide 1 */ 
 
 #slide1{
-	background-image:url('../images/sunglasses.png');
-	background-color:#f68f67;
+	background-image:url('../images/shattered_green.png');
+/*	background-color:#f68f67;*/
+	background-color:#008677;
 	color:#ffffff;
 }
 #slide1 h1 {
@@ -126,8 +127,9 @@ a:visited {
 /* Slide 3 */
 
 #slide3{
-	background-image:url('../images/footprints.png');
-	background-color:#8a8683;
+	background-image:url('../images/shattered_light_green.png');
+/*	background-color:#8a8683;*/
+	background-color:#008677;
 	color:#ffffff;
 }
 #slide3 h1 {
@@ -175,6 +177,28 @@ a:visited {
 	font-weight: 400;
 }
 
+
+#decorative.grid_5.omega{
+	padding-top: 20px;
+}
+#evnt_div_1.grid_7{
+  padding-top: 10px;
+}
+#evnt_div_2.grid_4{
+  padding-top: 10px;
+}
+#brought2u{
+	padding-bottom: 15px;
+}
+#credit_1.grid_4{
+	padding-top: 10px;
+}
+#credit_3.grid_4{
+	padding-top: 10px;
+}
+#credit_3 h2{
+	padding-bottom: 5px;
+}
 
 
 
