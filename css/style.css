@@ -188,7 +188,7 @@ a:visited {
   padding-top: 10px;
 }
 #brought2u{
-	padding-bottom: 15px;
+	padding-bottom: 30px;
 }
 #credit_1.grid_4{
 	padding-top: 10px;
@@ -198,6 +198,9 @@ a:visited {
 }
 #credit_3 h2{
 	padding-bottom: 5px;
+}
+#accelerateab{
+	padding-top: 15px;
 }
 
 
@@ -307,7 +310,7 @@ a:visited {
 	background-attachment: fixed;
 	width:100%;
 	position: relative;
-	padding:150px 0;
+	padding:100px 0;
 }
 
 
@@ -338,6 +341,9 @@ a:visited {
 
 #evnt_div_2.grid_4.omega {
 		text-align: center;
+}
+#evnt_div_2.grid_4{
+  padding-top: 0px;
 }
 
 

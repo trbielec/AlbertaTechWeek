@@ -47,6 +47,7 @@
 		</div>
 		<div id="decorative" class="grid_5 omega">
 			<img src="images/calendar.png">
+			<div id="caption" align="center"><h2>July 5-14th, 2013</h2></div>
 		</div>
 	
 	</div>
@@ -112,10 +113,10 @@
 		
 		<div id="content" class="grid_12">
 			<h1>Credits</h1>
-			<div id="brought2u"><h2 align='center'>Alberta Tech Week is brought to you by</h2><br><br></div>
+			<div id="brought2u"><h2 align='center'>Alberta Tech Week is brought to you by</h2></div>
 			<!-- <p>Follow us on Twitter!</p> -->
-			<div id='credit_1' align='center' class="grid_4"><h2>AccelerateAB<h2><br><a href="https://twitter.com/AccelerateAB" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @AccelerateAB</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+			<div id='credit_1' align='center' class="grid_4"><h2>AccelerateAB<h2><div id='accelerateab'><a href="https://twitter.com/AccelerateAB" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @AccelerateAB</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div></div>
 			<!-- <p><a href="https://twitter.com/AccelerateAB" target="_blank"><img src="images/twitter.png"></a></p> -->
 			<div id='credit_2' align='center' class="grid_3"><a href="http://www.eventbrite.com" target="_blank"><img src="images/eventbrite.png"></a></div>
 			<div id='credit_3' align='center' class="grid_4"><h2 align='center'>Design by</h2>

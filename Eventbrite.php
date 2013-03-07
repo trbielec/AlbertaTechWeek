@@ -254,7 +254,7 @@ class Eventbrite {
         }
 
         return "<div id='evnt_div_1' class=\"grid_7\"><a class='eb_event_list_title' href='".$evnt->url."'>".$evnt->title."</a><br><span class='eb_event_list_location'>" . $venue_name . "</span></span></div>
-<div id='evnt_div_2' class=\"grid_4 omega\" align='right'><span class='eb_event_list_date'>" .strftime('%a, %B %e', $time). "</span><span class='eb_event_list_time'>" .strftime('%l:%M %P', $time). "</span></div>\n\n";
+<div id='evnt_div_2' class=\"grid_4 omega\" align='right'><span class='eb_event_list_date'>" .strftime('%a, %B %e', $time). ", </span><span class='eb_event_list_time'>" .strftime('%l:%M %P', $time). "</span></div>\n\n";
     }
     /*
      * Widgets:
