@@ -21,7 +21,7 @@
 	<div class="container clearfix">
 
 		<div id="logo" class="grid_3">
-			<img src="images/logo.png">
+			<img src="images/logo2.png">
 		</div>
 		
 		<div id="nav" class="grid_9 omega">
@@ -46,7 +46,7 @@
 			<p>This is supposed to be a paragraph explaining what Tech Week is.</p>		
 		</div>
 		<div id="decorative" class="grid_5 omega">
-			<img src="images/decorative.png">
+			<img src="images/calendar.png">
 		</div>
 	
 	</div>
@@ -110,9 +110,7 @@
 			</style> -->
 
 			<!-- <h2>My Event List:</h2> -->
-			<?= Eventbrite::eventList( $events, 'eventListRow'); ?>
-			
-			
+			<?= Eventbrite::eventList( $events, 'eventListRow'); ?>			
 			
 			
 		</div>
@@ -155,12 +153,14 @@
 		
 		<div id="content" class="grid_12">
 			<h1>Credits</h1>
-			<h2>Alberta Tech Week is brought to you by AccelerateAB</h2>
+			<h2 align='center'>Alberta Tech Week is brought to you by AccelerateAB</h2>
 			<!-- <p>Follow us on Twitter!</p> -->
-			<a href="https://twitter.com/AccelerateAB" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @AccelerateAB</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<div align='center'><a href="https://twitter.com/AccelerateAB" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @AccelerateAB</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
 			<!-- <p><a href="https://twitter.com/AccelerateAB" target="_blank"><img src="images/twitter.png"></a></p> -->
-			<p><a href="http://www.eventbrite.com" target="_blank"><img src="images/eventbrite.png"></a></p>
+			<p align='center'><a href="http://www.eventbrite.com" target="_blank"><img src="images/eventbrite.png"></a></p><br>
+			<h2 align='center'>Design by</h2>
+			<p align='center'><a href="http://www.ownthenight.co" target="_blank"><img src="images/OwnTheNight.png"></a></p>
 		</div>
 	
 	</div>
