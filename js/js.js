@@ -15,17 +15,17 @@ jQuery(document).ready(function ($) {
         dataslide = $(this).attr('data-slide');
 
         if (direction === 'down') {
-            $('.navigation li[data-slide="' + dataslide + '"]').addClass('active').prev().removeClass('active');
+            // $('.navigation li[data-slide="' + dataslide + '"]').addClass('active').prev().removeClass('active');
         }
         else {
-            $('.navigation li[data-slide="' + dataslide + '"]').addClass('active').next().removeClass('active');
+            // $('.navigation li[data-slide="' + dataslide + '"]').addClass('active').next().removeClass('active');
         }
 
     });
  
     mywindow.scroll(function () {
         if (mywindow.scrollTop() == 0) {
-            $('.navigation li[data-slide="1"]').addClass('active');
+            // $('.navigation li[data-slide="1"]').addClass('active');
             $('.navigation li[data-slide="2"]').removeClass('active');
         }
     });
