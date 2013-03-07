@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/js.js"></script>
 	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="js/waypoints.min.js"></script>
@@ -26,9 +26,9 @@
 		
 		<div id="nav" class="grid_9 omega">
 			<ul class="navigation">
-				<li data-slide="1">Top Slide</li>
-				<li data-slide="2">Parallax Scrolling</li>
-				<li data-slide="3">Grid</li>
+				<li data-slide="1">About</li>
+				<li data-slide="2">Events</li>
+				<li data-slide="3">Submit an Event</li>
 				<li data-slide="4">Credits</li>
 			</ul>
 		</div>
@@ -41,12 +41,10 @@
 	<div class="container clearfix">
 		
 		<div id="content" class="grid_7">
-			<h1>Top Slide</h1>
-			<h2>Get ready to make magic!</h2>
-			<p>Remember that this is a BETA version. This is my first framework so if you see any issue please <a href="mailto:jalxob@gmail.com">let me know it</a>. </p>
-			<p>Don't forget to follow me!</p>
-			<p><a href="https://twitter.com/Jalxob" target="_blank"><img src="images/twitter.png"></a> <a href="http://dribbble.com/jalxob" target="_blank"><img src="images/dribbble.png"></a></p>
-			</div>
+			<h1>Alberta Tech Week</h1>
+			<h2>Get ready for the best week ever!</h2>
+			<p>This is supposed to be a paragraph explaining what Tech Week is.</p>		
+		</div>
 		<div id="decorative" class="grid_5 omega">
 			<img src="images/decorative.png">
 		</div>
@@ -60,8 +58,63 @@
 	<div class="container clearfix">
 		
 		<div id="content" class="grid_12">
-			<h1>Parallax Scrolling</h1>
-			<h2>What you've seen its called parallax scrolling</h2>
+			<h1>Events</h1>
+			<?php
+			// load the API Client library
+			include "Eventbrite.php"; 
+
+
+			// Initialize the API client
+			//  Eventbrite API / Application key (REQUIRED)
+			//   http://www.eventbrite.com/api/key/
+			//  Eventbrite user_key (OPTIONAL, only needed for reading/writing private user data)
+			//   http://www.eventbrite.com/userkeyapi
+			$authentication_tokens = array('app_key'  => 'Q7CJKJDPCRV6WRHAZK');
+			$eb_client = new Eventbrite( $authentication_tokens );
+
+
+			// For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
+			$search_params = array(
+			  'date' => 'This Week',
+			  'city' => 'Calgary',
+			  'region' => 'AB',
+			  'country' => 'CA'
+			);
+			$events = $eb_client->event_search($search_params);
+
+			//mark-up the list of events that were requested 
+			// render in html - ?>
+			<!-- <style type="text/css">
+			.eb_event_list_item{
+			  padding-top: 20px;
+			}
+			.eb_event_list_title{
+	/*			  position: absolute;*/
+	/*			padding-top: 10px;*/
+	/*			margin-left: 10px;*/
+	/*			  left: 220px;
+			  width: 300px;*/
+			  overflow: hidden;
+			}
+			.eb_event_list_date{
+	/*			  padding-left: 20px;*/
+			}
+			.eb_event_list_time{
+	/*			  position: absolute;*/
+	/*			  left: 150px;*/
+			}
+			.eb_event_list_location{
+	/*			  position: absolute;*/
+	/*			  left: 520px;*/
+			}
+			</style> -->
+
+			<!-- <h2>My Event List:</h2> -->
+			<?= Eventbrite::eventList( $events, 'eventListRow'); ?>
+			
+			
+			
+			
 		</div>
 	
 	</div>
@@ -89,6 +142,8 @@
 		<div id="test" class="grid_10">10</div> <div id="test" class="grid_2 omega">2</div>
 		<div id="test" class="grid_11">11</div> <div id="test" class="grid_1 omega">1</div>
 		<div id="test" class="grid_12">12</div>
+		
+		
 	
 	</div>
 </div>
@@ -100,9 +155,12 @@
 		
 		<div id="content" class="grid_12">
 			<h1>Credits</h1>
-			<h2><a href="http://jalxob.com/cool-kitten" target="_blank">Cool Kitten</a> was made by <a href="http://www.jalxob.com" target="_blank">Jalxob</a>.</h2>
-			<p>Don't forget to follow me!</p>
-			<p><a href="https://twitter.com/Jalxob" target="_blank"><img src="images/twitter.png"></a> <a href="http://dribbble.com/jalxob" target="_blank"><img src="images/dribbble.png"></a></p>
+			<h2>Alberta Tech Week is brought to you by AccelerateAB</h2>
+			<!-- <p>Follow us on Twitter!</p> -->
+			<a href="https://twitter.com/AccelerateAB" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @AccelerateAB</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			<!-- <p><a href="https://twitter.com/AccelerateAB" target="_blank"><img src="images/twitter.png"></a></p> -->
+			<p><a href="http://www.eventbrite.com" target="_blank"><img src="images/eventbrite.png"></a></p>
 		</div>
 	
 	</div>

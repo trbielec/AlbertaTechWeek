@@ -83,16 +83,38 @@ a:visited {
 /* Slide 1 */ 
 
 #slide1{
-	background-color:#ffffff;
+	background-image:url('../images/sunglasses.png');
+	background-color:#f68f67;
+	color:#ffffff;
 }
 #slide1 h1 {
+	font-size: 3.8em;
+	letter-spacing: -3px;
+	line-height: 0px;
+	color:#ffffff;
+	font-weight: 700;
+}
+#slide1 h2 {
+	font-size: 2em;
+	color: #ffffff;
+	line-height: 0px;
+	padding-bottom:20px;
+	font-weight: 400;
+}
+
+/* Slide 2 */ 
+
+#slide2{
+	background-color:#ffffff;
+}
+#slide2 h1 {
 	font-size: 3.8em;
 	letter-spacing: -3px;
 	line-height: 0px;
 	color:#8a8683;
 	font-weight: 700;
 }
-#slide1 h2 {
+#slide2 h2 {
 	font-size: 2em;
 	color: #8a8683;
 	line-height: 0px;
@@ -101,23 +123,21 @@ a:visited {
 }
 
 
+/* Slide 3 */
 
-
-/* Slide 2 */ 
-
-#slide2{
+#slide3{
 	background-image:url('../images/footprints.png');
-	background-color:#f68f67;
+	background-color:#8a8683;
 	color:#ffffff;
 }
-#slide2 h1 {
+#slide3 h1 {
 	font-size: 3.8em;
 	letter-spacing: -3px;
 	line-height: 0px;
 	color:#ffffff;
 	font-weight: 700;
 }
-#slide2 h2 {
+#slide3 h2 {
 	font-size: 2em;
 	color: #ffffff;
 	line-height: 0px;
@@ -128,19 +148,19 @@ a:visited {
 
 
 
-/* Slide 3 */ 
+/* Slide 4 */ 
 
-#slide3{
+#slide4{
 	background-color:#ffffff;
 }
-#slide3 h1 {
+#slide4 h1 {
 	font-size: 3.8em;
 	letter-spacing: -3px;
 	line-height: 0px;
 	color:#8a8683;
 	font-weight: 700;
 }
-#slide3 h2 {
+#slide4 h2 {
 	font-size: 2em;
 	color: #8a8683;
 	line-height: 0px;
@@ -152,31 +172,6 @@ a:visited {
 	color:#ffffff;
 	text-align:center;
 	font-size: 2em;
-	font-weight: 400;
-}
-
-
-
-
-/* Slide 4 */
-
-#slide4{
-	background-image:url('../images/sunglasses.png');
-	background-color:#8a8683;
-	color:#ffffff;
-}
-#slide4 h1 {
-	font-size: 3.8em;
-	letter-spacing: -3px;
-	line-height: 0px;
-	color:#ffffff;
-	font-weight: 700;
-}
-#slide4 h2 {
-	font-size: 2em;
-	color: #ffffff;
-	line-height: 0px;
-	padding-bottom:20px;
 	font-weight: 400;
 }
 
