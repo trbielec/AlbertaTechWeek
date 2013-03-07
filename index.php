@@ -44,6 +44,7 @@
 			<h1>Alberta Tech Week</h1>
 			<h2>10 full days of technology</h2>
 			<p>This site is the hub of all events, meetups, socials, and hackathons.</p>		
+			<div id='hashtag'>#abtw2013</div>
 		</div>
 		<div id="decorative" class="grid_5 omega">
 			<img src="images/calendar.png">
