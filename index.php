@@ -101,7 +101,7 @@
 		<div id="content" class="grid_12">
 			<h1>Submit an Event</h1>
 			<h2>Do you have a tech-related event during this week? </h2>
-			<p>Post it here!</p>
+			<p>Just add #abtw2013 to your Eventbrite event description and it will be showcased on this page! <a href="http://www.eventbrite.ca/features/">Create an event</a></p>
 		</div>
 		
 	</div>
@@ -116,12 +116,17 @@
 			<h1>Credits</h1>
 			<div id="brought2u"><h2 align='center'>Alberta Tech Week is brought to you by</h2></div>
 			<!-- <p>Follow us on Twitter!</p> -->
-			<div id='credit_1' align='center' class="grid_4"><h2>AccelerateAB<h2><div id='accelerateab'><a href="https://twitter.com/AccelerateAB" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @AccelerateAB</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div></div>
-			<!-- <p><a href="https://twitter.com/AccelerateAB" target="_blank"><img src="images/twitter.png"></a></p> -->
-			<div id='credit_2' align='center' class="grid_3"><a href="http://www.eventbrite.com" target="_blank"><img src="images/eventbrite.png"></a></div>
-			<div id='credit_3' align='center' class="grid_4"><h2 align='center'>Design by</h2>
-			<p align='center'><a href="http://www.ownthenight.co" target="_blank"><img src="images/OwnTheNight.png"></a></p></div>
+			
+			<div id='credit_1' align='center' class="grid_4 omega">
+			<p align='center'><a href="http://accelerateab.com/" target="_blank"><img src="images/ACC_AB.jpg"></a></p></div>
+			
+			<div id='credit_2' align='center' class="grid_4 omega"><a href="http://www.eventbrite.com" target="_blank"><img src="images/eventbrite.png"></a></div>
+			
+			<div id='credit_3' align='center' class="grid_4 omega"><h2 align='center'>Design by</h2>
+			<p align='center'><a href="http://www.ownthenight.co" target="_blank"><img src="images/OwnTheNight-icon.png"></a></p></div>
+			
+			<div id='credit_4' align='center' class="grid_4 omega">
+			<p align='center'><a href="http://boastcapital.com/" target="_blank"><img src="images/BoastCapital.png"></a></p></div>
 		</div>
 	
 	</div>
