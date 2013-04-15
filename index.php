@@ -43,7 +43,10 @@
 		<div id="content" class="grid_7">
 			<h1>Alberta Tech Week</h1>
 			<h2>10 full days of technology</h2>
-			<p>This site is the hub of all events, meetups, socials, and hackathons.</p>		
+			<!-- <p>This site is the hub of all events, meetups, socials, and hackathons.</p>		 -->
+			
+			
+			<p>After the explosive growth of AccelerateAB (hyperlink to site) the past two years,  Alberta Tech Week has been created as a banner to capture all of the amazing events, meet-ups, parties and workshops taking place during ten intense days in July. Alberta Tech Week is a celebration of all things tech related in our amazing province and we're putting a call out to anyone that wants to add to the festivities. Create your own meet up, host a party, plan a run along the river. It's going to be an insanely busy week and we cannot wait. Use evenbrite, include the #abtw2013 in the description and let us know what you're planning and we'll help promote!</p>
 			<div id='hashtag'>#abtw2013</div>
 		</div>
 		<div id="decorative" class="grid_5 omega">
@@ -80,6 +83,7 @@
 			// 			  'region' => 'AB',
 			// 			  'country' => 'CA'
 			// 			);
+			
 			$search_params = array(
 			  'keywords' => '#abtw2013',
 			  'sort_by' => 'date'
