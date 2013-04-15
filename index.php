@@ -65,7 +65,6 @@
 			// load the API Client library
 			include "Eventbrite.php"; 
 
-
 			// Initialize the API client
 			//  Eventbrite API / Application key (REQUIRED)
 			//   http://www.eventbrite.com/api/key/
@@ -74,17 +73,18 @@
 			$authentication_tokens = array('app_key'  => 'Q7CJKJDPCRV6WRHAZK');
 			$eb_client = new Eventbrite( $authentication_tokens );
 
-
 			// For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
+			// $search_params = array(
+			// 			  'date' => 'This Week',
+			// 			  'city' => 'Calgary',
+			// 			  'region' => 'AB',
+			// 			  'country' => 'CA'
+			// 			);
 			$search_params = array(
-			  'date' => 'This Week',
-			  'city' => 'Calgary',
-			  'region' => 'AB',
-			  'country' => 'CA'
+			  'keywords' => '#abtw2013',
+			  'sort_by' => 'date'
 			);
 			$events = $eb_client->event_search($search_params); ?>
-
-			
 			<?= Eventbrite::eventList( $events, 'eventListRow'); ?>			
 			
 			
