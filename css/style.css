@@ -64,6 +64,21 @@ a:visited {
 	color: #f68f67;
 	font-weight:bold;
 }
+div.about{
+	float: left;
+	padding:0 0 0 50px;
+}
+
+div.about a:link{
+	color: #8a8683;
+}
+div.about a:visited{
+	color: #8a8683;
+}
+div.about a:hover{
+	cursor:pointer;
+	color: #a9d3d0;
+}
 
 
 

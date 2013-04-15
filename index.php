@@ -21,12 +21,12 @@
 	<div class="container clearfix">
 
 		<div id="logo" class="grid_3">
-			<img src="images/logo2.png">
+			<a href="index.php"><img src="images/logo2.png"></a>
 		</div>
 		
 		<div id="nav" class="grid_9 omega">
 			<ul class="navigation">
-				<li data-slide="1">About</li>
+				<div class="about"><a href="about.html">About</a></div>
 				<li data-slide="2">Events</li>
 				<li data-slide="3">Submit an Event</li>
 				<li data-slide="4">Credits</li>
@@ -46,7 +46,7 @@
 			<!-- <p>This site is the hub of all events, meetups, socials, and hackathons.</p>		 -->
 			
 			
-			<p>After the explosive growth of <a href="http://accelerateab.com/">AccelerateAB</a> the past two years,  Alberta Tech Week has been created as a banner to capture all of the amazing events, meet-ups, parties and workshops taking place during ten intense days in July. Alberta Tech Week is a celebration of all things tech related in our amazing province and we're putting a call out to anyone that wants to add to the festivities.</p> 
+			<p>After the explosive growth of <a href="http://accelerateab.com/">AccelerateAB</a> over the past two years, Alberta Tech Week has been created as a banner to capture all of the amazing events, meet-ups, parties and workshops taking place during ten intense days in July. Alberta Tech Week is a celebration of all things tech related in our amazing province and we're putting a call out to anyone that wants to add to the festivities.</p> 
 			
 			<p>Start your own meetup, host a party, plan a run along the river. It's going to be an insanely busy week and we're excited to see all the great events that you've planned!</p>
 			<div id='hashtag'>#abtw2013</div>
