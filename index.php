@@ -48,7 +48,7 @@
 			
 			<p>After the explosive growth of <a href="http://accelerateab.com/">AccelerateAB</a> the past two years,  Alberta Tech Week has been created as a banner to capture all of the amazing events, meet-ups, parties and workshops taking place during ten intense days in July. Alberta Tech Week is a celebration of all things tech related in our amazing province and we're putting a call out to anyone that wants to add to the festivities.</p> 
 			
-			<p>Create your own meet up, host a party, plan a run along the river. It's going to be an insanely busy week and we're excited to see all the great events that you've planned!</p>
+			<p>Start your own meetup, host a party, plan a run along the river. It's going to be an insanely busy week and we're excited to see all the great events that you've planned!</p>
 			<div id='hashtag'>#abtw2013</div>
 		</div>
 		<div id="decorative" class="grid_5 omega">
@@ -68,29 +68,39 @@
 			<h1>Events</h1>
 			<?php
 			// load the API Client library
-			include "Eventbrite.php"; 
-
-			// Initialize the API client
-			//  Eventbrite API / Application key (REQUIRED)
-			//   http://www.eventbrite.com/api/key/
-			//  Eventbrite user_key (OPTIONAL, only needed for reading/writing private user data)
-			//   http://www.eventbrite.com/userkeyapi
-			$authentication_tokens = array('app_key'  => 'Q7CJKJDPCRV6WRHAZK');
-			$eb_client = new Eventbrite( $authentication_tokens );
-
-			// For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
-			// $search_params = array(
-			// 			  'date' => 'This Week',
-			// 			  'city' => 'Calgary',
-			// 			  'region' => 'AB',
-			// 			  'country' => 'CA'
-			// 			);
+			include "Eventbrite.php";
 			
-			$search_params = array(
-			  'keywords' => '#abtw2013',
-			  'sort_by' => 'date'
-			);
-			$events = $eb_client->event_search($search_params); ?>
+			if (file_exists('events.data')) {
+			    $data = unserialize(file_get_contents('events.data'));
+			    if ($data['timestamp'] > time() - 2 * 60) { // Cache is 2 mins
+			        $events = $data['events'];
+			    }
+			}
+			if (!$events) { // cache doesn't exist or is older than 2 mins
+			    // Initialize the API client
+				//  Eventbrite API / Application key (REQUIRED)
+				//   http://www.eventbrite.com/api/key/
+				//  Eventbrite user_key (OPTIONAL, only needed for reading/writing private user data)
+				//   http://www.eventbrite.com/userkeyapi
+				$authentication_tokens = array('app_key'  => 'Q7CJKJDPCRV6WRHAZK');
+				$eb_client = new Eventbrite( $authentication_tokens );
+
+				// For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
+				// $search_params = array(
+				// 			  'date' => 'This Week',
+				// 			  'city' => 'Calgary',
+				// 			  'region' => 'AB',
+				// 			  'country' => 'CA'
+				// 			);
+
+				$search_params = array(
+				  'keywords' => '#abtw2013',
+				  'sort_by' => 'date'
+				);
+				$events = $eb_client->event_search($search_params);
+			    $data = array ('events' => $events, 'timestamp' => time());
+				    file_put_contents('events.data', serialize($data));
+				} ?>
 			<?= Eventbrite::eventList( $events, 'eventListRow'); ?>			
 			
 			
