@@ -15,6 +15,16 @@
 	<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
 	<script type="text/javascript" src="js/waypoints.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-40112391-1', 'albertatechweek.com');
+	  ga('send', 'pageview');
+
+	</script>
 </head>
 
 <body>
@@ -45,7 +55,7 @@
 		<div id="content" class="grid_7">
 			<h1>Alberta Tech Week</h1>
 			<h2>10 full days of technology</h2>
-			<!-- <p>This site is the hub of all events, meetups, socials, and hackathons.</p>		 -->
+			<!-- <p>This site is the hub of all events, meetups, socials, and hackathons.</p>-->
 			
 			
 			<p>After the explosive growth of <a href="http://accelerateab.com/">AccelerateAB</a> over the past two years, Alberta Tech Week has been created as a banner to capture all of the amazing events, meet-ups, parties and workshops taking place during ten intense days in July. Alberta Tech Week is a celebration of all things tech related in our amazing province and we're putting a call out to anyone that wants to add to the festivities. <a href="about.html">More...</a></p> 
