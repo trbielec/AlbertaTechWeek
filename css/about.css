@@ -1,0 +1,13 @@
+/* Tablet */
+@media screen and (max-width: 1024px) {
+	.navigation li{
+		width:33%;
+	}	
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+	.navigation li{
+		width:33%;
+	}
+}
