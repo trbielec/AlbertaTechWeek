@@ -4,6 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
 	<title>Alberta Tech Week 2013</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
@@ -21,12 +23,12 @@
 	<div class="container clearfix">
 
 		<div id="logo" class="grid_3">
-			<a href="index.php"><img src="images/logo2.png"></a>
+			<a href="index.php"><img src="images/logo.png"></a>
 		</div>
 		
 		<div id="nav" class="grid_9 omega">
 			<ul class="navigation">
-				<div class="about"><a href="about.html">About</a></div>
+				<li data-slide="1">About</li>
 				<li data-slide="2">Events</li>
 				<li data-slide="3">Submit an Event</li>
 				<li data-slide="4">Credits</li>
@@ -46,7 +48,7 @@
 			<!-- <p>This site is the hub of all events, meetups, socials, and hackathons.</p>		 -->
 			
 			
-			<p>After the explosive growth of <a href="http://accelerateab.com/">AccelerateAB</a> over the past two years, Alberta Tech Week has been created as a banner to capture all of the amazing events, meet-ups, parties and workshops taking place during ten intense days in July. Alberta Tech Week is a celebration of all things tech related in our amazing province and we're putting a call out to anyone that wants to add to the festivities.</p> 
+			<p>After the explosive growth of <a href="http://accelerateab.com/">AccelerateAB</a> over the past two years, Alberta Tech Week has been created as a banner to capture all of the amazing events, meet-ups, parties and workshops taking place during ten intense days in July. Alberta Tech Week is a celebration of all things tech related in our amazing province and we're putting a call out to anyone that wants to add to the festivities. <a href="about.html">More...</a></p> 
 			
 			<p>Start your own meetup, host a party, plan a run along the river. It's going to be an insanely busy week and we're excited to see all the great events that you've planned!</p>
 			<div id='hashtag'>#abtw2013</div>
@@ -117,7 +119,8 @@
 		<div id="content" class="grid_12">
 			<h1>Submit an Event</h1>
 			<h2>Do you have a tech-related event during this week? </h2>
-			<p>Just create an Eventbrite event, add #abtw2013 to the event description, and it will be showcased on this page! <a href="http://www.eventbrite.ca/features/">Create an event</a></p>
+			<p>Just create an Eventbrite event, add #abtw2013 to the event description, and it will be showcased on this page! </p>
+			<h2><a href="https://www.eventbrite.ca/signup?referrer=/create" target=_blank>Create an event</a></h2>
 		</div>
 		
 	</div>
