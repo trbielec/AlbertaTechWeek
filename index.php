@@ -151,7 +151,7 @@
 			
 			<div id='credit_2' align='center' class="grid_4 omega"><a href="http://www.eventbrite.com" target="_blank"><img src="images/eventbrite.png"></a></div>
 			
-			<div id='credit_3' align='center' class="grid_4 omega"><h2 align='center'>Design by</h2>
+			<div id='credit_3' align='center' class="grid_4 omega"><!-- <h2 align='center'>Design by</h2> -->
 			<p align='center'><a href="http://www.ownthenight.co" target="_blank"><img src="images/OwnTheNight-icon.png"></a></p></div>
 			
 			<div id='credit_4' align='center' class="grid_4 omega">
