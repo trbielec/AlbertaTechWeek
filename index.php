@@ -107,7 +107,8 @@
 
 				$search_params = array(
 				  'keywords' => '#abtw2013',
-				  'sort_by' => 'date'
+				  'sort_by' => 'date',
+				  'max' => 40
 				);
 				$events = $eb_client->event_search($search_params);
 			    $data = array ('events' => $events, 'timestamp' => time());
