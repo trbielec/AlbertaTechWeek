@@ -77,45 +77,79 @@
 	<div class="container clearfix">
 		
 		<div id="content" class="grid_12">
-			<h1>Events</h1>
+			<h1>Eventbrite Events</h1>
 			<?php
-			// load the API Client library
-			include "Eventbrite.php";
+				// load the API Client library
+				include "Eventbrite.php";
+
+				if (file_exists('eventbrite.data')) {
+				    $eb_data = unserialize(file_get_contents('eventbrite.data'));
+				    if ($eb_data['timestamp'] > time() - 2 * 60) { // Cache is 2 mins
+				        $events = $eb_data['events'];
+				    }
+				}
+				if (!$events) { // cache doesn't exist or is older than 2 mins
+				    // Initialize the API client
+					//  Eventbrite API / Application key (REQUIRED)
+					//   http://www.eventbrite.com/api/key/
+					//  Eventbrite user_key (OPTIONAL, only needed for reading/writing private user data)
+					//   http://www.eventbrite.com/userkeyapi
+					$authentication_tokens = array('app_key'  => 'Q7CJKJDPCRV6WRHAZK');
+					$eb_client = new Eventbrite( $authentication_tokens );
+
+					// For more information about the features that are available through the Eventbrite API, 
+					// see http://developer.eventbrite.com/doc/
+					// $search_params = array(
+					// 			  'date' => 'This Week',
+					// 			  'city' => 'Calgary',
+					// 			  'region' => 'AB',
+					// 			  'country' => 'CA'
+					// 			);
+
+					$search_params = array(
+					  'keywords' => '#abtw2013',
+					  'sort_by' => 'date'
+					);
+					$events = $eb_client->event_search($search_params);
+				    $eb_data = array ('events' => $events, 'timestamp' => time());
+				    file_put_contents('eventbrite.data', serialize($eb_data));
+				} 
+			?>
+			<?= Eventbrite::eventList( $events, 'eventListRow'); ?>
+		</div>
 			
-			if (file_exists('events.data')) {
-			    $data = unserialize(file_get_contents('events.data'));
-			    if ($data['timestamp'] > time() - 2 * 60) { // Cache is 2 mins
-			        $events = $data['events'];
+		<div id="content" class="grid_12">
+			<h1>Meetup Events</h1>
+			<?php
+			require 'meetup.php';
+			if (file_exists('meetup.data')) {
+			    $m_data = unserialize(file_get_contents('meetup.data'));
+			    if ($m_data['timestamp'] > time() - 2 * 60) { // Cache is 2 mins
+			        $events = $m_data['events'];
 			    }
 			}
 			if (!$events) { // cache doesn't exist or is older than 2 mins
-			    // Initialize the API client
-				//  Eventbrite API / Application key (REQUIRED)
-				//   http://www.eventbrite.com/api/key/
-				//  Eventbrite user_key (OPTIONAL, only needed for reading/writing private user data)
-				//   http://www.eventbrite.com/userkeyapi
-				$authentication_tokens = array('app_key'  => 'Q7CJKJDPCRV6WRHAZK');
-				$eb_client = new Eventbrite( $authentication_tokens );
-
-				// For more information about the features that are available through the Eventbrite API, see http://developer.eventbrite.com/doc/
-				// $search_params = array(
-				// 			  'date' => 'This Week',
-				// 			  'city' => 'Calgary',
-				// 			  'region' => 'AB',
-				// 			  'country' => 'CA'
-				// 			);
-
-				$search_params = array(
-				  'keywords' => '#abtw2013',
-				  'sort_by' => 'date'
-				);
-				$events = $eb_client->event_search($search_params);
-			    $data = array ('events' => $events, 'timestamp' => time());
-				    file_put_contents('events.data', serialize($data));
-				} ?>
-			<?= Eventbrite::eventList( $events, 'eventListRow'); ?>			
+				$meetup = new Meetup(array(
+				    'key' => '5f502f351c2654a3a107464dc4c35'
+				));
 			
+				date_default_timezone_set('UTC');
 			
+				$events = $meetup->getOpenEvents(array(
+				    'state' => 'ab',
+					'city' => 'Calgary',
+					'country' => 'ca',
+					'text' => 'startup', //#abtw2013
+					'time' => '1373004000000,1373867999000'
+				));
+			    $m_data = array ('events' => $events, 'timestamp' => time());
+				    file_put_contents('meetup.data', serialize($m_data));
+			}
+			foreach ($events as $m_event) {
+				echo "<div id='evnt_div_1' class=\"grid_7\"><a class='eb_event_list_title' target=_blank href='".$m_event->event_url."'>".$m_event->name."</a><br><span class='eb_event_list_location'>" . $m_event->venue->name . "</span></span></div>
+		<div id='evnt_div_2' class=\"grid_5 omega\" align='right'><span class='eb_event_list_date'>" .strftime('%a, %B %e', ($m_event->time + $m_event->utc_offset)/1000). ", </span><span class='eb_event_list_time'>" .strftime('%l:%M %p', ($m_event->time + $m_event->utc_offset)/1000)."</span></div>\n\n";
+			}
+			?>
 		</div>
 	
 	</div>
